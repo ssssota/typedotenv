@@ -1,12 +1,13 @@
 {
-  "name": "typedotenv",
-  "private": true,
+  "name": "@typedotenv/unplugin",
   "version": "0.1.0",
-  "description": "All in One typedotenv (dotenv utility for TypeScript)",
+  "description": "typedotenv plugin for webpack/vite (dotenv utility for TypeScript)",
   "type": "module",
+  "main": "index.js",
   "scripts": {
-    "fmt": "rome format .",
-    "check": "rome ci ."
+    "test": "vitest run",
+    "fmt": "pnpm -w fmt",
+    "check": "rome ci . && tsc"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,8 @@
   "keywords": [
     "dotenv",
     "typescript",
-    "code-generator"
+    "code-generator",
+    "unplugin"
   ],
   "author": "TOMIKAWA Sotaro",
   "license": "Apache-2.0",
@@ -25,6 +27,11 @@
   "homepage": "https://github.com/ssssota/typedotenv#readme",
   "packageManager": "pnpm@7.27.0",
   "devDependencies": {
-    "rome": "^11.0.0"
+    "rome": "^11.0.0",
+    "typescript": "^4.9.5",
+    "vitest": "^0.28.5"
+  },
+  "dependencies": {
+    "@typedotenv/core": "workspace:../core"
   }
 }

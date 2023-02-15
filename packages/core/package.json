@@ -1,0 +1,54 @@
+{
+  "name": "@typedotenv/core",
+  "version": "0.1.0",
+  "description": "typedotenv core library (dotenv utility for TypeScript)",
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/cjs/index.d.ts",
+  "exports": {
+    "require": {
+      "types": "./dist/cjs/index.d.ts",
+      "default": "./dist/cjs/index.js"
+    },
+    "default": {
+      "types": "./dist/esm/index.d.ts",
+      "default": "./dist/esm/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "clean": "node -e 'fs.rmSync(`dist`, {recursive:true, force:true})'",
+    "build": "pnpm clean && pnpm build:cjs && pnpm build:esm",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "build:esm": "tsc --module esnext --outDir dist/esm",
+    "test": "vitest run",
+    "fmt": "pnpm -w fmt",
+    "check": "rome ci . && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssssota/typedotenv.git"
+  },
+  "keywords": [
+    "dotenv",
+    "typescript",
+    "code-generator"
+  ],
+  "author": "TOMIKAWA Sotaro",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ssssota/typedotenv/issues"
+  },
+  "homepage": "https://github.com/ssssota/typedotenv#readme",
+  "packageManager": "pnpm@7.27.0",
+  "devDependencies": {
+    "rome": "^11.0.0",
+    "typescript": "^4.9.5",
+    "vitest": "^0.28.5",
+    "dotenv": "^16.0.3"
+  },
+  "peerDependencies": {
+    "dotenv": "^16.0.0"
+  }
+}
