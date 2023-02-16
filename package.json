@@ -5,6 +5,7 @@
   "description": "All in One typedotenv (dotenv utility for TypeScript)",
   "type": "module",
   "scripts": {
+    "test": "pnpm -r test",
     "fmt": "rome format .",
     "check": "rome ci .",
     "build": "pnpm -r build",

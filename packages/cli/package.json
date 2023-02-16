@@ -12,7 +12,8 @@
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "tsx build.ts",
-    "test": "vitest run",
+    "test": "pnpm build && vitest run",
+    "watch": "pnpm build && vitest",
     "fmt": "pnpm -w fmt",
     "check": "rome ci . && tsc",
     "prepack": "pnpm build"
