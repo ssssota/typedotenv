@@ -14,7 +14,8 @@
     "build": "tsx build.ts",
     "test": "vitest run",
     "fmt": "pnpm -w fmt",
-    "check": "rome ci . && tsc"
+    "check": "rome ci . && tsc",
+    "prepack": "pnpm build"
   },
   "repository": {
     "type": "git",
