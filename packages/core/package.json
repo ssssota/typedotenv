@@ -1,6 +1,6 @@
 {
   "name": "@typedotenv/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "typedotenv core library (dotenv utility for TypeScript)",
   "type": "module",
   "main": "./dist/index.cjs",
