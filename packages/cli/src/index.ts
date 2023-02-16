@@ -5,10 +5,7 @@ import * as path from "path";
 
 const generateCommand = createCommand("generate")
 	.argument("[output-file]", "Destination of TypeScript file", "env.ts")
-	.option(
-		"-i --input <env_filepath>",
-		".env file suffix (e.g. production -> .env.production)",
-	)
+	.option("-i --input <env_filepath>", ".env file (e.g. .env.development)")
 	.option(
 		"-e --env <environment>",
 		".env file suffix (e.g. production -> .env.production)",
