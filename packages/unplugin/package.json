@@ -73,7 +73,7 @@
     "dotenv": "^16.0.0"
   },
   "dependencies": {
-    "@typedotenv/core": "file:../core",
+    "@typedotenv/core": "workspace:../core",
     "unplugin": "^1.1.0"
   }
 }
