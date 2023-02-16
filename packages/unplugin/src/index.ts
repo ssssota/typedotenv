@@ -26,13 +26,9 @@ type EnvOptions =
 	  };
 export type Options = (GenerateOptions & EnvOptions) & {
 	/**
-	 * Destination for generated TypeScript file
+	 * Destination for generated TypeScript file path
 	 */
-	outDir: string;
-	/**
-	 * Filename for generated TypeScript [default:`__env.ts`]
-	 */
-	filename?: string;
+	output?: string;
 };
 
 const resolveDotenv = ({ env, envDir, envFile }: EnvOptions): string => {
@@ -45,20 +41,19 @@ const resolveDotenv = ({ env, envDir, envFile }: EnvOptions): string => {
 const name = "unplugin-typedotenv";
 export default createUnplugin((options: Options) => {
 	const envfile = resolveDotenv(options);
-	const { outDir, filename = "__env.ts" } = options;
-	const load = async () => {
+	const { output = "env.ts" } = options;
+	const generateCode = async () => {
 		try {
-			const generatePath = path.join(outDir, filename);
 			const [dotenv, previous] = await Promise.all([
 				fs.readFile(envfile, "utf8"),
-				fs.readFile(generatePath, "utf8").catch(() => {}),
+				fs.readFile(output, "utf8").catch(() => {}),
 			]);
 			const code = generate(dotenv, options);
 			if (
 				previous?.replace(/[ \n\r\t]+/g, " ") !==
 				code.replace(/[ \n\r\t]+/g, " ")
 			) {
-				await fs.writeFile(generatePath, code);
+				await fs.writeFile(output, code);
 			}
 			return { code };
 		} catch (e) {
@@ -70,13 +65,11 @@ export default createUnplugin((options: Options) => {
 		name,
 		async buildStart(this: UnpluginBuildContext) {
 			this.addWatchFile(envfile);
-			await load();
+			await generateCode();
 		},
-		loadInclude(id: string) {
-			const [filepath, query] = id.split("?", 2);
-			if (query) return false;
-			return path.basename(filepath) === filename;
+		async watchChange(id) {
+			if (id !== envfile) return;
+			await generateCode();
 		},
-		load,
 	};
 });
