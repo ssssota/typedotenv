@@ -1,9 +1,11 @@
 {
-  "name": "typedotenv",
+  "name": "@typedotenv/cli",
   "version": "0.1.0",
   "description": "CLI tool for typedotenv (dotenv utility for TypeScript)",
   "type": "module",
-  "bin": "dist/index.cjs",
+  "bin": {
+    "typedotenv": "dist/index.cjs"
+  },
   "files": [
     "dist"
   ],
