@@ -12,4 +12,5 @@ buildSync({
 	bundle: true,
 	outfile: "dist/index.cjs",
 	define: { ...npmPackageDefineMap },
+	banner: { js: "#!/usr/bin/env node" },
 });

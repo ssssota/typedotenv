@@ -3,25 +3,23 @@
   "version": "0.1.0",
   "description": "typedotenv core library (dotenv utility for TypeScript)",
   "type": "module",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/cjs/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    "require": {
-      "types": "./dist/cjs/index.d.ts",
-      "default": "./dist/cjs/index.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
     },
-    "default": {
-      "types": "./dist/esm/index.d.ts",
-      "default": "./dist/esm/index.js"
-    }
+    "./*": "./*"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "node -e 'fs.rmSync(`dist`, {recursive:true, force:true})'",
-    "build": "pnpm clean && pnpm build:cjs && pnpm build:esm",
-    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
-    "build:esm": "tsc --module esnext --outDir dist/esm",
+    "build": "tsup && tsx postbuild.ts",
     "test": "vitest run",
     "fmt": "pnpm -w fmt",
     "check": "rome ci . && tsc"
@@ -43,10 +41,13 @@
   "homepage": "https://github.com/ssssota/typedotenv#readme",
   "packageManager": "pnpm@7.27.0",
   "devDependencies": {
+    "dotenv": "^16.0.3",
+    "fast-glob": "^3.2.12",
     "rome": "^11.0.0",
+    "tsup": "^6.6.3",
+    "tsx": "^3.12.3",
     "typescript": "^4.9.5",
-    "vitest": "^0.28.5",
-    "dotenv": "^16.0.3"
+    "vitest": "^0.28.5"
   },
   "peerDependencies": {
     "dotenv": "^16.0.0"

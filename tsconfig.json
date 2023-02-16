@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
-    "strict": true
+    "module": "es2020",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node"
   }
 }

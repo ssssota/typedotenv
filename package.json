@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "fmt": "rome format .",
-    "check": "rome ci ."
+    "check": "rome ci .",
+    "build": "pnpm -r build"
   },
   "repository": {
     "type": "git",

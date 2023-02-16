@@ -6,6 +6,10 @@ import * as path from "path";
 const generateCommand = createCommand("generate")
 	.argument("[output-file]", "Destination of TypeScript file", "env.ts")
 	.option(
+		"-i --input <env_filepath>",
+		".env file suffix (e.g. production -> .env.production)",
+	)
+	.option(
 		"-e --env <environment>",
 		".env file suffix (e.g. production -> .env.production)",
 	)
@@ -13,13 +17,13 @@ const generateCommand = createCommand("generate")
 		"-d --dir <envfile_directory>",
 		".env file directory path [default:CWD]",
 	)
-	.action(async (out, { env, dir }) => {
+	.action(async (output, { input, env, dir }) => {
 		const envDir = dir ?? process.cwd();
 		const envFile = env ? `.env.${env}` : ".env";
-		const envPath = path.join(envDir, envFile);
+		const envPath = input ?? path.join(envDir, envFile);
 		const dotenv = await fs.readFile(envPath, "utf8");
 		const code = generate(dotenv);
-		await fs.writeFile(out, code);
+		await fs.writeFile(output, code);
 	});
 
 const command = createCommand("typedotenv")
