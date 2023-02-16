@@ -63,8 +63,7 @@ it("should output help message for generate", async () => {
 		                                \\"env.ts\\")
 
 		Options:
-		  -i --input <env_filepath>     .env file suffix (e.g. production ->
-		                                .env.production)
+		  -i --input <env_filepath>     .env file (e.g. .env.development)
 		  -e --env <environment>        .env file suffix (e.g. production ->
 		                                .env.production)
 		  -d --dir <envfile_directory>  .env file directory path [default:CWD]
