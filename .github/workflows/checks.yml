@@ -1,0 +1,11 @@
+name: Checks
+on:
+  push:
+jobs:
+  check:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup-node
+      - run: pnpm check

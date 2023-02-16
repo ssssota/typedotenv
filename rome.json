@@ -8,5 +8,8 @@
   },
   "formatter": {
     "enabled": true
+  },
+  "files": {
+    "ignore": ["./**/dist/**/*"]
   }
 }
