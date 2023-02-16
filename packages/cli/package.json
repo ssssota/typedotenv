@@ -39,7 +39,7 @@
   "devDependencies": {
     "@types/node": "^18.13.0",
     "@commander-js/extra-typings": "^10.0.2",
-    "@typedotenv/core": "workspace:../core",
+    "@typedotenv/core": "workspace:*",
     "commander": "^10.0.0",
     "esbuild": "^0.17.8",
     "rome": "^11.0.0",
