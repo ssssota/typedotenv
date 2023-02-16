@@ -15,7 +15,7 @@ importers:
   packages/cli:
     specifiers:
       '@commander-js/extra-typings': ^10.0.2
-      '@typedotenv/core': workspace:../core
+      '@typedotenv/core': workspace:*
       '@types/node': ^18.13.0
       commander: ^10.0.0
       dotenv: ^16.0.3
@@ -56,7 +56,7 @@ importers:
 
   packages/unplugin:
     specifiers:
-      '@typedotenv/core': workspace:../core
+      '@typedotenv/core': workspace:*
       '@types/node': ^18.13.0
       dotenv: ^16.0.3
       fast-glob: ^3.2.12
