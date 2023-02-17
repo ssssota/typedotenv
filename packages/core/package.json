@@ -23,7 +23,7 @@
     "test": "vitest run",
     "watch": "vitest",
     "fmt": "pnpm -w fmt",
-    "check": "rome ci . && tsc",
+    "check": "pnpm -w check && tsc --noEmit",
     "prepack": "pnpm build"
   },
   "repository": {

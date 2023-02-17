@@ -17,20 +17,34 @@ export type GenerateOptions = PropertyOptions & {
 	/**
 	 * Disable type assertions like `as string`
 	 * @example
-	 * disableTypeAssertion: true
+	 * enableTypeAssertion: true
 	 * ```js
-	 * export const VAR = process.env.VAR;
-	 * ```
-	 * disableTypeAssertion: false
-	 * ```ts
 	 * export const VAR = process.env.VAR as string;
 	 * ```
+	 * enableTypeAssertion: false
+	 * ```ts
+	 * export const VAR = process.env.VAR;
+	 * ```
 	 */
-	disableTypeAssertion?: boolean;
+	enableTypeAssertion?: boolean;
 	/**
 	 * End of line cheracter [default: `\n`]
 	 */
 	eol?: string;
+	/**
+	 * Disable runtime validation
+	 * @example
+	 * disableRuntimeTypeCheck: true
+	 * ```ts
+	 * export const VAR = process.env.VAR as string;
+	 * ```
+	 * disableRuntimeTypeCheck: false
+	 * ```ts
+	 * export const VAR = process.env.VAR as string;
+	 * if (typeof VAR !== 'string') throw new Error('VAR is not defined in .env');
+	 * ```
+	 */
+	disableRuntimeTypeCheck?: boolean;
 };
 
 /**
@@ -44,10 +58,17 @@ export const generate = (dotenv: string, options: GenerateOptions = {}) => {
 	validation(parsed, options);
 	const eol = options.eol ?? "\n";
 	const envObject = options.envObject ?? "process.env";
-	const typeAssertion = options.disableTypeAssertion ? "" : " as string";
-	const definitions = Object.keys(parsed).map(
-		(key) => `export const ${key} = ${envObject}.${key}${typeAssertion};`,
-	);
+	const typeAssertion = options.enableTypeAssertion ? " as string" : "";
+	const definitions = Object.keys(parsed).map((key) => {
+		const envVar = `${envObject}.${key}`;
+		return [
+			!options.disableRuntimeTypeCheck &&
+				`if (typeof ${envVar} !== 'string') throw new Error('${key} is not defined in .env');`,
+			`export const ${key} = ${envVar}${typeAssertion};`,
+		]
+			.filter(Boolean)
+			.join(eol);
+	});
 	const code = [options.prefix ?? defaultPrefix, ...definitions].join(eol);
 	return code + eol;
 };

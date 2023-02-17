@@ -14,14 +14,29 @@ const generateCommand = createCommand("generate")
 		"-d --dir <envfile_directory>",
 		".env file directory path [default:CWD]",
 	)
-	.action(async (output, { input, env, dir }) => {
-		const envDir = dir ?? process.cwd();
-		const envFile = env ? `.env.${env}` : ".env";
-		const envPath = input ?? path.join(envDir, envFile);
-		const dotenv = await fs.readFile(envPath, "utf8");
-		const code = generate(dotenv);
-		await fs.writeFile(output, code);
-	});
+	.option(
+		"--env-object <object>",
+		"Object provide env variables [default:process.env]",
+	)
+	.option("--enable-type-assertion", "Disable type assertion (`as string`)")
+	.option("--disable-type-check", "Disable runtime type-check")
+	.action(
+		async (
+			output,
+			{ input, env, dir, enableTypeAssertion, disableTypeCheck, envObject },
+		) => {
+			const envDir = dir ?? process.cwd();
+			const envFile = env ? `.env.${env}` : ".env";
+			const envPath = input ?? path.join(envDir, envFile);
+			const dotenv = await fs.readFile(envPath, "utf8");
+			const code = generate(dotenv, {
+				envObject,
+				enableTypeAssertion,
+				disableRuntimeTypeCheck: disableTypeCheck,
+			});
+			await fs.writeFile(output, code);
+		},
+	);
 
 const command = createCommand("typedotenv")
 	.version(process.env.npm_package_version!)
