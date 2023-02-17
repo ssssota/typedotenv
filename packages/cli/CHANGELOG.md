@@ -1,5 +1,11 @@
 # @typedotenv/cli
 
+## 0.2.0
+
+### Minor Changes
+
+- [#5](https://github.com/ssssota/typedotenv/pull/5) [`038fda4`](https://github.com/ssssota/typedotenv/commit/038fda487b2f85a19dcdf300f2152710db664af7) Thanks [@ssssota](https://github.com/ssssota)! - Runtime type check
+
 ## 0.1.1
 
 ### Patch Changes
