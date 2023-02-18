@@ -2,6 +2,9 @@
 
 typedotenv with [unplugin](https://github.com/unjs/unplugin).
 
+You can generate TypeScript code from `.env` file.
+When you edit the `.env` file, the file is re-created.
+
 [read more](../../README.md)
 
 ## Setup
