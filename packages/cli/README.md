@@ -2,22 +2,7 @@
 
 CLI tool for typedotenv
 
-## Usage
-
-```
-Usage: typedotenv generate [options] [output-file]
-
-Arguments:
-  output-file                   Destination of TypeScript file (default:
-                                "env.ts")
-
-Options:
-  -i --input <env_filepath>     .env file (e.g. .env.development)
-  -e --env <environment>        .env file suffix (e.g. production ->
-                                .env.production)
-  -d --dir <envfile_directory>  .env file directory path [default:CWD]
-  -h, --help                    display help for command
-```
+[read more](../../README.md)
 
 ## Setup
 
@@ -33,4 +18,21 @@ _package.json_
     "generate": "typedotenv generate -e production src/env.ts"
   }
 }
+```
+
+## Usage
+
+```
+Usage: typedotenv generate [options] [output-file]
+
+Arguments:
+  output-file                   Destination of TypeScript file (default:
+                                "env.ts")
+
+Options:
+  -i --input <env_filepath>     .env file (e.g. .env.development)
+  -e --env <environment>        .env file suffix (e.g. production ->
+                                .env.production)
+  -d --dir <envfile_directory>  .env file directory path [default:CWD]
+  -h, --help                    display help for command
 ```
