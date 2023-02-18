@@ -1,5 +1,11 @@
 # @typedotenv/cli
 
+## 0.3.0
+
+### Minor Changes
+
+- [#11](https://github.com/ssssota/typedotenv/pull/11) [`3db5a18`](https://github.com/ssssota/typedotenv/commit/3db5a18a509e2ad3d1624227ceb705ef3956447d) Thanks [@ssssota](https://github.com/ssssota)! - Add validation options and check command
+
 ## 0.2.0
 
 ### Minor Changes
