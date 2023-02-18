@@ -34,6 +34,13 @@
     },
     "./*": "./*"
   },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*"
+      ]
+    }
+  },
   "files": [
     "dist"
   ],
@@ -51,7 +58,10 @@
     "dotenv",
     "typescript",
     "code-generator",
-    "unplugin"
+    "unplugin",
+    "plugin",
+    "webpack",
+    "vite"
   ],
   "author": "TOMIKAWA Sotaro",
   "license": "Apache-2.0",
