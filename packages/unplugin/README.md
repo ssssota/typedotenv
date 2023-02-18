@@ -2,6 +2,8 @@
 
 typedotenv with [unplugin](https://github.com/unjs/unplugin).
 
+[read more](../../README.md)
+
 ## Setup
 
 ```sh
