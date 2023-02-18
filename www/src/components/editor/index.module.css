@@ -1,0 +1,11 @@
+.textarea {
+  font-size: 1.2em;
+  padding: 5px;
+  border: var(--input-border-width) var(--input-border-color) var(--input-border-style);
+  resize: none;
+  border-radius: var(--input-border-radius);
+}
+.textarea:focus {
+  outline: var(--input-focus-outline-color) var(--input-focus-outline-style) var(--input-focus-outline-width);
+  outline-offset: var(--input-focus-outline-offset);
+}

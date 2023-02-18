@@ -1,0 +1,28 @@
+:root {
+  --input-border-color: #ccc;
+  --input-border-width: 1px;
+  --input-border-style: solid;
+  --input-border-radius: 3px;
+  --input-focus-outline-color: skyblue;
+  --input-focus-outline-style: solid;
+  --input-focus-outline-width: 2px;
+  --input-focus-outline-offset: -1px;
+}
+
+html {
+  font-family: 'Mukta', sans-serif;
+}
+
+:where(*, *::after, *::before) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:where(ul, ol) {
+  list-style: none;
+}
+
+:where(textarea, input, pre, code) {
+  font-family: monospace;
+}

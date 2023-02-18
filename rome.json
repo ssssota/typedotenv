@@ -10,6 +10,6 @@
     "enabled": true
   },
   "files": {
-    "ignore": ["./**/dist/**/*"]
+    "ignore": ["./**/dist/**/*", "./www/src/env.ts"]
   }
 }
