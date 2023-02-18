@@ -22,9 +22,19 @@ _package.json_
 
 ## Usage
 
-```
-Usage: typedotenv generate [options] [output-file]
+### `typedotnev generate`
 
+Generate TypeScript code from `.env` .
+
+### `typedotenv check`
+
+Check if TypeScript code is up to date.
+
+It is also useful to compare TS for development with `.env` for production.
+
+### Options
+
+```
 Arguments:
   output-file                   Destination of TypeScript file (default:
                                 "env.ts")
@@ -34,5 +44,12 @@ Options:
   -e --env <environment>        .env file suffix (e.g. production ->
                                 .env.production)
   -d --dir <envfile_directory>  .env file directory path [default:CWD]
-  -h, --help                    display help for command
+  --env-object <object>         Object provide env variable
+                                [default:process.env]
+  --enable-type-assertion       Disable type assertion (`as string`)
+  --disable-type-check          Disable runtime type-check
+  --allow <allow_key>           Allow keys (If you specify this, you won't be
+                                able to use other keys) (default: [])
+  --deny <deny_key>             Deny keys (default: [])
+  --required <required_key>     Required keys (default: [])
 ```
