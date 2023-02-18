@@ -12,4 +12,5 @@ export default defineConfig(({ mode }) => ({
 		}),
 		preact(),
 	],
+	base: "/typedotenv/",
 }));
