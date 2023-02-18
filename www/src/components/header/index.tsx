@@ -7,7 +7,7 @@ export function Header() {
 	return (
 		<div class={classes.container}>
 			<h1 class={classes.title}>
-				<img src="/typedotenv.svg" alt="" />
+				<img src={`${import.meta.env.BASE_URL}/typedotenv.svg`} alt="" />
 				<div>typedotenv</div>
 			</h1>
 			<p>{VITE_DESCRIPTION}</p>
