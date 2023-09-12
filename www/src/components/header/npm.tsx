@@ -10,6 +10,7 @@ export function Npm({ size }: Props) {
 			width={size}
 			height={size}
 		>
+			<title>npm</title>
 			<rect fill="#333333" width="27.23" height="27.23" rx="2" />
 			<polygon
 				fill="#fff"

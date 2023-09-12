@@ -16,7 +16,7 @@ it("should generate exports", () => {
 
 it("should prepend prefix", () => {
 	const prefix = "/* eslint-disable */";
-	expect(generate("", { prefix })).toBe(prefix + "\n");
+	expect(generate("", { prefix })).toBe(`${prefix}\n`);
 });
 
 it("should change eol", () => {

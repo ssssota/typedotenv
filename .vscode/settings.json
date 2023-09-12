@@ -3,7 +3,8 @@
 	"editor.formatOnSave": true,
 	"editor.codeActionsOnSave": {
 		"source.fixAll": true,
-		"source.organizeImports": true
+		"source.organizeImports.biome": true,
+		"quickfix.biome": true
 	},
 	"files.associations": {
 		".env.*": "properties"
