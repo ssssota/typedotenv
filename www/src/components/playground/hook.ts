@@ -8,6 +8,7 @@ export function useTypedotenv(initial: string) {
 		envObject: "process.env",
 		disableRuntimeTypeCheck: false,
 		enableTypeAssertion: false,
+		accessFromIndexSignature: false,
 	});
 	const dotenv = useSignal(initial);
 	const result = useComputed(() => {
