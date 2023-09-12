@@ -1,12 +1,14 @@
 {
 	"name": "@typedotenv/cli",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"description": "CLI tool for typedotenv (dotenv utility for TypeScript)",
 	"type": "module",
 	"bin": {
 		"typedotenv": "dist/index.cjs"
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"dev": "tsx src/index.ts",
 		"build": "tsx build.ts",
@@ -20,7 +22,13 @@
 		"type": "git",
 		"url": "git+https://github.com/ssssota/typedotenv.git"
 	},
-	"keywords": ["dotenv", "typescript", "code-generator", "cli", "tool"],
+	"keywords": [
+		"dotenv",
+		"typescript",
+		"code-generator",
+		"cli",
+		"tool"
+	],
 	"author": "TOMIKAWA Sotaro",
 	"license": "Apache-2.0",
 	"bugs": {
