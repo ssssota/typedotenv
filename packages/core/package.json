@@ -1,6 +1,6 @@
 {
 	"name": "@typedotenv/core",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"description": "typedotenv core library (dotenv utility for TypeScript)",
 	"type": "module",
 	"main": "./dist/index.cjs",
@@ -14,7 +14,9 @@
 		},
 		"./*": "./*"
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"clean": "node -e 'fs.rmSync(`dist`, {recursive:true, force:true})'",
 		"build": "tsup && tsx postbuild.ts",
@@ -28,7 +30,11 @@
 		"type": "git",
 		"url": "git+https://github.com/ssssota/typedotenv.git"
 	},
-	"keywords": ["dotenv", "typescript", "code-generator"],
+	"keywords": [
+		"dotenv",
+		"typescript",
+		"code-generator"
+	],
 	"author": "TOMIKAWA Sotaro",
 	"license": "Apache-2.0",
 	"bugs": {

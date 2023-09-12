@@ -1,5 +1,12 @@
 # unplugin-typedotenv
 
+## 0.2.2
+
+### Patch Changes
+
+- Updated dependencies [[`76623a1`](https://github.com/ssssota/typedotenv/commit/76623a1979b922f92ce4f54d7e821db7724d27bd)]:
+  - @typedotenv/core@0.3.0
+
 ## 0.2.1
 
 ### Patch Changes
