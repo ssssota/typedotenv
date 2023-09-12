@@ -6,7 +6,7 @@
 	"type": "module",
 	"scripts": {
 		"test": "pnpm -r test",
-		"fmt": "biome format .",
+		"fmt": "biome format --write .",
 		"check": "biome ci .",
 		"build": "pnpm -r build",
 		"changeset": "changeset",

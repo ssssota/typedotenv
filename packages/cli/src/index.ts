@@ -87,7 +87,7 @@ const generateCodeFromOptions = async ({
 		envObject,
 		enableTypeAssertion,
 		disableRuntimeTypeCheck: disableTypeCheck,
-		accessFromIndexSignature
+		accessFromIndexSignature,
 	});
 };
 

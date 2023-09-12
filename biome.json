@@ -1,15 +1,15 @@
 {
-  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true
-    }
-  },
-  "formatter": {
-    "enabled": true
-  },
-  "files": {
-    "ignore": ["./**/dist/**/*", "./www/src/env.ts"]
-  }
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true
+		}
+	},
+	"formatter": {
+		"enabled": true
+	},
+	"files": {
+		"ignore": ["./**/dist/**/*", "./www/src/env.ts"]
+	}
 }
