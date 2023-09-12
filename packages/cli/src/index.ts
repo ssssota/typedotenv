@@ -1,11 +1,11 @@
+import * as path from "path";
 import {
-	createCommand,
 	type Command,
 	type OptionValues,
+	createCommand,
 } from "@commander-js/extra-typings";
 import { generate } from "@typedotenv/core";
 import * as fs from "fs/promises";
-import * as path from "path";
 import * as process from "process";
 
 type Options = {
@@ -87,7 +87,7 @@ const generateCodeFromOptions = async ({
 		envObject,
 		enableTypeAssertion,
 		disableRuntimeTypeCheck: disableTypeCheck,
-		accessFromIndexSignature
+		accessFromIndexSignature,
 	});
 };
 
@@ -136,7 +136,9 @@ const checkCommand = applyGenerateOptions(
 });
 
 const command = createCommand("typedotenv")
+	// biome-ignore lint/style/noNonNullAssertion: <explanation>
 	.version(process.env.npm_package_version!)
+	// biome-ignore lint/style/noNonNullAssertion: <explanation>
 	.description(process.env.npm_package_description!)
 	.addCommand(generateCommand)
 	.addCommand(checkCommand)

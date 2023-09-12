@@ -1,11 +1,12 @@
 {
-  "editor.defaultFormatter": "rome.rome",
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.organizeImports": true
-  },
-  "files.associations": {
-    ".env.*": "properties"
-  }
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true,
+		"source.organizeImports.biome": true,
+		"quickfix.biome": true
+	},
+	"files.associations": {
+		".env.*": "properties"
+	}
 }

@@ -11,7 +11,7 @@ export function Highlight({ code, options }: Props) {
 	return (
 		<div
 			class={classes.container}
-			// rome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+			// biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
 			dangerouslySetInnerHTML={{ __html: html.value }}
 		/>
 	);

@@ -1,8 +1,9 @@
+import * as path from "path";
 import type { GenerateOptions } from "@typedotenv/core";
 import { generate } from "@typedotenv/core";
 import * as fs from "fs/promises";
-import * as path from "path";
-import { createUnplugin, UnpluginBuildContext } from "unplugin";
+import type { UnpluginBuildContext } from "unplugin";
+import { createUnplugin } from "unplugin";
 
 type EnvOptions =
 	| {

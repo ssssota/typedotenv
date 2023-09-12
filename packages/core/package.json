@@ -1,57 +1,51 @@
 {
-  "name": "@typedotenv/core",
-  "version": "0.2.0",
-  "description": "typedotenv core library (dotenv utility for TypeScript)",
-  "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
-    },
-    "./*": "./*"
-  },
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "clean": "node -e 'fs.rmSync(`dist`, {recursive:true, force:true})'",
-    "build": "tsup && tsx postbuild.ts",
-    "test": "vitest run",
-    "watch": "vitest",
-    "fmt": "pnpm -w fmt",
-    "check": "pnpm -w check && tsc --noEmit",
-    "prepack": "pnpm build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ssssota/typedotenv.git"
-  },
-  "keywords": [
-    "dotenv",
-    "typescript",
-    "code-generator"
-  ],
-  "author": "TOMIKAWA Sotaro",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/ssssota/typedotenv/issues"
-  },
-  "homepage": "https://github.com/ssssota/typedotenv#readme",
-  "packageManager": "pnpm@7.27.0",
-  "devDependencies": {
-    "dotenv": "^16.0.3",
-    "fast-glob": "^3.2.12",
-    "rome": "^11.0.0",
-    "tsup": "^6.6.3",
-    "tsx": "^3.12.3",
-    "typescript": "^4.9.5",
-    "vitest": "^0.28.5"
-  },
-  "peerDependencies": {
-    "dotenv": "^16.0.0"
-  }
+	"name": "@typedotenv/core",
+	"version": "0.2.0",
+	"description": "typedotenv core library (dotenv utility for TypeScript)",
+	"type": "module",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"require": "./dist/index.cjs",
+			"import": "./dist/index.js"
+		},
+		"./*": "./*"
+	},
+	"files": ["dist"],
+	"scripts": {
+		"clean": "node -e 'fs.rmSync(`dist`, {recursive:true, force:true})'",
+		"build": "tsup && tsx postbuild.ts",
+		"test": "vitest run",
+		"watch": "vitest",
+		"fmt": "pnpm -w fmt",
+		"check": "pnpm -w check && tsc --noEmit",
+		"prepack": "pnpm build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ssssota/typedotenv.git"
+	},
+	"keywords": ["dotenv", "typescript", "code-generator"],
+	"author": "TOMIKAWA Sotaro",
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/ssssota/typedotenv/issues"
+	},
+	"homepage": "https://github.com/ssssota/typedotenv#readme",
+	"packageManager": "pnpm@7.27.0",
+	"devDependencies": {
+		"@biomejs/biome": "^1.1.2",
+		"dotenv": "^16.0.3",
+		"fast-glob": "^3.2.12",
+		"tsup": "^6.6.3",
+		"tsx": "^3.12.3",
+		"typescript": "^5.2.2",
+		"vitest": "^0.28.5"
+	},
+	"peerDependencies": {
+		"dotenv": "^16.0.0"
+	}
 }

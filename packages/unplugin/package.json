@@ -1,91 +1,87 @@
 {
-  "name": "unplugin-typedotenv",
-  "version": "0.2.1",
-  "description": "typedotenv plugin for webpack/vite (dotenv utility for TypeScript)",
-  "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
-    },
-    "./vite": {
-      "types": "./dist/vite.d.ts",
-      "require": "./dist/vite.cjs",
-      "import": "./dist/vite.js"
-    },
-    "./webpack": {
-      "types": "./dist/webpack.d.ts",
-      "require": "./dist/webpack.cjs",
-      "import": "./dist/webpack.js"
-    },
-    "./rollup": {
-      "types": "./dist/rollup.d.ts",
-      "require": "./dist/rollup.cjs",
-      "import": "./dist/rollup.js"
-    },
-    "./esbuild": {
-      "types": "./dist/esbuild.d.ts",
-      "require": "./dist/esbuild.cjs",
-      "import": "./dist/esbuild.js"
-    },
-    "./*": "./*"
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*"
-      ]
-    }
-  },
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "fmt": "pnpm -w fmt",
-    "check": "pnpm -w check && tsc --noEmit",
-    "build": "tsup && tsx postbuild.ts",
-    "prepack": "pnpm build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ssssota/typedotenv.git"
-  },
-  "keywords": [
-    "dotenv",
-    "typescript",
-    "code-generator",
-    "unplugin",
-    "plugin",
-    "webpack",
-    "vite"
-  ],
-  "author": "TOMIKAWA Sotaro",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/ssssota/typedotenv/issues"
-  },
-  "homepage": "https://github.com/ssssota/typedotenv#readme",
-  "packageManager": "pnpm@7.27.0",
-  "devDependencies": {
-    "@types/node": "^18.13.0",
-    "dotenv": "^16.0.3",
-    "fast-glob": "^3.2.12",
-    "rome": "^11.0.0",
-    "tsup": "^6.6.3",
-    "tsx": "^3.12.3",
-    "typescript": "^4.9.5",
-    "vite": "^4.1.1",
-    "vitest": "^0.28.5"
-  },
-  "peerDependencies": {
-    "dotenv": "^16.0.0"
-  },
-  "dependencies": {
-    "@typedotenv/core": "workspace:*",
-    "unplugin": "^1.1.0"
-  }
+	"name": "unplugin-typedotenv",
+	"version": "0.2.1",
+	"description": "typedotenv plugin for webpack/vite (dotenv utility for TypeScript)",
+	"type": "module",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"require": "./dist/index.cjs",
+			"import": "./dist/index.js"
+		},
+		"./vite": {
+			"types": "./dist/vite.d.ts",
+			"require": "./dist/vite.cjs",
+			"import": "./dist/vite.js"
+		},
+		"./webpack": {
+			"types": "./dist/webpack.d.ts",
+			"require": "./dist/webpack.cjs",
+			"import": "./dist/webpack.js"
+		},
+		"./rollup": {
+			"types": "./dist/rollup.d.ts",
+			"require": "./dist/rollup.cjs",
+			"import": "./dist/rollup.js"
+		},
+		"./esbuild": {
+			"types": "./dist/esbuild.d.ts",
+			"require": "./dist/esbuild.cjs",
+			"import": "./dist/esbuild.js"
+		},
+		"./*": "./*"
+	},
+	"typesVersions": {
+		"*": {
+			"*": ["./dist/*"]
+		}
+	},
+	"files": ["dist"],
+	"scripts": {
+		"fmt": "pnpm -w fmt",
+		"check": "pnpm -w check && tsc --noEmit",
+		"build": "tsup && tsx postbuild.ts",
+		"prepack": "pnpm build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ssssota/typedotenv.git"
+	},
+	"keywords": [
+		"dotenv",
+		"typescript",
+		"code-generator",
+		"unplugin",
+		"plugin",
+		"webpack",
+		"vite"
+	],
+	"author": "TOMIKAWA Sotaro",
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/ssssota/typedotenv/issues"
+	},
+	"homepage": "https://github.com/ssssota/typedotenv#readme",
+	"packageManager": "pnpm@7.27.0",
+	"devDependencies": {
+		"@biomejs/biome": "^1.1.2",
+		"@types/node": "^18.13.0",
+		"dotenv": "^16.0.3",
+		"fast-glob": "^3.2.12",
+		"tsup": "^6.6.3",
+		"tsx": "^3.12.3",
+		"typescript": "^5.2.2",
+		"vite": "^4.1.1",
+		"vitest": "^0.28.5"
+	},
+	"peerDependencies": {
+		"dotenv": "^16.0.0"
+	},
+	"dependencies": {
+		"@typedotenv/core": "workspace:*",
+		"unplugin": "^1.1.0"
+	}
 }

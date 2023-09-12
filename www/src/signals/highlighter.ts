@@ -12,6 +12,8 @@ getHighlighter({
 		themes: "shiki/",
 		languages: "shiki/",
 	},
-}).then((h) => (_highlighter.value = h));
+}).then((h) => {
+	_highlighter.value = h;
+});
 export const highlighter: ReadonlySignal<Highlighter | undefined> =
 	_highlighter;
