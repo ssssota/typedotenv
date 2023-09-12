@@ -1,6 +1,6 @@
 {
 	"name": "@typedotenv/cli",
-	"version": "0.4.0",
+	"version": "0.4.1",
 	"description": "CLI tool for typedotenv (dotenv utility for TypeScript)",
 	"type": "module",
 	"bin": {
