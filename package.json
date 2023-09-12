@@ -1,37 +1,33 @@
 {
-  "name": "typedotenv",
-  "private": true,
-  "version": "0.1.0",
-  "description": "All in One typedotenv (dotenv utility for TypeScript)",
-  "type": "module",
-  "scripts": {
-    "test": "pnpm -r test",
-    "fmt": "rome format .",
-    "check": "rome ci .",
-    "build": "pnpm -r build",
-    "changeset": "changeset",
-    "changeset:release": "pnpm build && changeset publish",
-    "changeset:version": "changeset version && pnpm install --lockfile-only"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ssssota/typedotenv.git"
-  },
-  "keywords": [
-    "dotenv",
-    "typescript",
-    "code-generator"
-  ],
-  "author": "TOMIKAWA Sotaro",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/ssssota/typedotenv/issues"
-  },
-  "homepage": "https://github.com/ssssota/typedotenv#readme",
-  "packageManager": "pnpm@7.27.0",
-  "devDependencies": {
-    "@changesets/changelog-github": "^0.4.8",
-    "@changesets/cli": "^2.26.0",
-    "rome": "^11.0.0"
-  }
+	"name": "typedotenv",
+	"private": true,
+	"version": "0.1.0",
+	"description": "All in One typedotenv (dotenv utility for TypeScript)",
+	"type": "module",
+	"scripts": {
+		"test": "pnpm -r test",
+		"fmt": "biome format .",
+		"check": "biome ci .",
+		"build": "pnpm -r build",
+		"changeset": "changeset",
+		"changeset:release": "pnpm build && changeset publish",
+		"changeset:version": "changeset version && pnpm install --lockfile-only"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ssssota/typedotenv.git"
+	},
+	"keywords": ["dotenv", "typescript", "code-generator"],
+	"author": "TOMIKAWA Sotaro",
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/ssssota/typedotenv/issues"
+	},
+	"homepage": "https://github.com/ssssota/typedotenv#readme",
+	"packageManager": "pnpm@7.27.0",
+	"devDependencies": {
+		"@biomejs/biome": "^1.1.2",
+		"@changesets/changelog-github": "^0.4.8",
+		"@changesets/cli": "^2.26.0"
+	}
 }
