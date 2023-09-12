@@ -60,23 +60,24 @@ it("should output help message for generate", async () => {
 		"Usage: typedotenv generate [options] [output-file]
 
 		Arguments:
-		  output-file                   Destination of TypeScript file (default:
-		                                \\"env.ts\\")
+		  output-file                    Destination of TypeScript file (default:
+		                                 \\"env.ts\\")
 
 		Options:
-		  -i --input <env_filepath>     .env file (e.g. .env.development)
-		  -e --env <environment>        .env file suffix (e.g. production ->
-		                                .env.production)
-		  -d --dir <envfile_directory>  .env file directory path [default:CWD]
-		  --env-object <object>         Object provide env variable
-		                                [default:process.env]
-		  --enable-type-assertion       Disable type assertion (\`as string\`)
-		  --disable-type-check          Disable runtime type-check
-		  --allow <allow_key>           Allow keys (If you specify this, you won't be
-		                                able to use other keys) (default: [])
-		  --deny <deny_key>             Deny keys (default: [])
-		  --required <required_key>     Required keys (default: [])
-		  -h, --help                    display help for command
+		  -i --input <env_filepath>      .env file (e.g. .env.development)
+		  -e --env <environment>         .env file suffix (e.g. production ->
+		                                 .env.production)
+		  -d --dir <envfile_directory>   .env file directory path [default:CWD]
+		  --env-object <object>          Object provide env variable
+		                                 [default:process.env]
+		  --enable-type-assertion        Disable type assertion (\`as string\`)
+		  --disable-type-check           Disable runtime type-check
+		  --access-from-index-signature  Access from index signature
+		  --allow <allow_key>            Allow keys (If you specify this, you won't be
+		                                 able to use other keys) (default: [])
+		  --deny <deny_key>              Deny keys (default: [])
+		  --required <required_key>      Required keys (default: [])
+		  -h, --help                     display help for command
 		"
 	`);
 });
@@ -88,23 +89,24 @@ it("should output help message for check", async () => {
 		"Usage: typedotenv check [options] [output-file]
 
 		Arguments:
-		  output-file                   Destination of TypeScript file (default:
-		                                \\"env.ts\\")
+		  output-file                    Destination of TypeScript file (default:
+		                                 \\"env.ts\\")
 
 		Options:
-		  -i --input <env_filepath>     .env file (e.g. .env.development)
-		  -e --env <environment>        .env file suffix (e.g. production ->
-		                                .env.production)
-		  -d --dir <envfile_directory>  .env file directory path [default:CWD]
-		  --env-object <object>         Object provide env variable
-		                                [default:process.env]
-		  --enable-type-assertion       Disable type assertion (\`as string\`)
-		  --disable-type-check          Disable runtime type-check
-		  --allow <allow_key>           Allow keys (If you specify this, you won't be
-		                                able to use other keys) (default: [])
-		  --deny <deny_key>             Deny keys (default: [])
-		  --required <required_key>     Required keys (default: [])
-		  -h, --help                    display help for command
+		  -i --input <env_filepath>      .env file (e.g. .env.development)
+		  -e --env <environment>         .env file suffix (e.g. production ->
+		                                 .env.production)
+		  -d --dir <envfile_directory>   .env file directory path [default:CWD]
+		  --env-object <object>          Object provide env variable
+		                                 [default:process.env]
+		  --enable-type-assertion        Disable type assertion (\`as string\`)
+		  --disable-type-check           Disable runtime type-check
+		  --access-from-index-signature  Access from index signature
+		  --allow <allow_key>            Allow keys (If you specify this, you won't be
+		                                 able to use other keys) (default: [])
+		  --deny <deny_key>              Deny keys (default: [])
+		  --required <required_key>      Required keys (default: [])
+		  -h, --help                     display help for command
 		"
 	`);
 });

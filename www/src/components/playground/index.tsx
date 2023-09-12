@@ -59,6 +59,19 @@ export function Playground() {
 						/>
 					</li>
 					<li>
+						Access from index signature{" "}
+						<input
+							type="checkbox"
+							checked={options.value.accessFromIndexSignature}
+							onChange={(ev) => {
+								options.value = {
+									...options.value,
+									accessFromIndexSignature: ev.currentTarget.checked,
+								};
+							}}
+						/>
+					</li>
+					<li>
 						Allow list
 						<br />
 						<Input

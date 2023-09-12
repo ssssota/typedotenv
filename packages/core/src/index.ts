@@ -45,6 +45,19 @@ export type GenerateOptions = PropertyOptions & {
 	 * ```
 	 */
 	disableRuntimeTypeCheck?: boolean;
+	/**
+	 * Access environment variables from index (obj["key"]) signature or dot (obj.key) signature
+	 * @example
+	 * accessFromIndexSignature: true
+	 * ```js
+	 * export const VAR = process.env["VAR"];
+	 * ```
+	 * accessFromIndexSignature: false
+	 * ```ts
+	 * export const VAR = process.env.VAR;
+	 * ```
+	 */
+	accessFromIndexSignature?: boolean;
 };
 
 /**
@@ -60,7 +73,9 @@ export const generate = (dotenv: string, options: GenerateOptions = {}) => {
 	const envObject = options.envObject ?? "process.env";
 	const typeAssertion = options.enableTypeAssertion ? " as string" : "";
 	const definitions = Object.keys(parsed).map((key) => {
-		const envVar = `${envObject}.${key}`;
+		const envVar = options.accessFromIndexSignature
+			? `${envObject}["${key}"]`
+			: `${envObject}.${key}`;
 		return [
 			!options.disableRuntimeTypeCheck &&
 				`if (typeof ${envVar} !== 'string') throw new Error('${key} is not defined in .env');`,

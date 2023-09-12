@@ -15,6 +15,7 @@ type Options = {
 	envObject?: string | undefined;
 	enableTypeAssertion?: true | undefined;
 	disableTypeCheck?: true | undefined;
+	accessFromIndexSignature?: true | undefined;
 	allow: string[];
 	deny: string[];
 	required: string[];
@@ -42,6 +43,7 @@ const applyGenerateOptions = <
 		)
 		.option("--enable-type-assertion", "Disable type assertion (`as string`)")
 		.option("--disable-type-check", "Disable runtime type-check")
+		.option("--access-from-index-signature", "Access from index signature")
 		.option(
 			"--allow <allow_key>",
 			"Allow keys (If you specify this, you won't be able to use other keys)",
@@ -63,6 +65,7 @@ const generateCodeFromOptions = async ({
 	dir,
 	enableTypeAssertion,
 	disableTypeCheck,
+	accessFromIndexSignature,
 	envObject,
 	allow,
 	deny,
@@ -84,6 +87,7 @@ const generateCodeFromOptions = async ({
 		envObject,
 		enableTypeAssertion,
 		disableRuntimeTypeCheck: disableTypeCheck,
+		accessFromIndexSignature
 	});
 };
 
