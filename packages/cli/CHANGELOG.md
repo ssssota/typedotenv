@@ -1,5 +1,11 @@
 # @typedotenv/cli
 
+## 0.4.1
+
+### Patch Changes
+
+- [#21](https://github.com/ssssota/typedotenv/pull/21) [`9738f71`](https://github.com/ssssota/typedotenv/commit/9738f71dfc30b5b77cda9d88a96a463677fd4c5f) Thanks [@tobigumo](https://github.com/tobigumo)! - fix(cli): fix process.env error
+
 ## 0.4.0
 
 ### Minor Changes
