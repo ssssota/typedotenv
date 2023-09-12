@@ -6,7 +6,6 @@ import {
 } from "@commander-js/extra-typings";
 import { generate } from "@typedotenv/core";
 import * as fs from "fs/promises";
-import * as process from "process";
 
 type Options = {
 	input?: string | undefined;
