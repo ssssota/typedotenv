@@ -22,7 +22,7 @@ importers:
       dotenv: ^16.0.3
       esbuild: ^0.17.8
       tsx: ^3.12.3
-      typescript: ^4.9.5
+      typescript: ^5.2.2
       vitest: ^0.28.5
     devDependencies:
       '@biomejs/biome': 1.1.2
@@ -33,7 +33,7 @@ importers:
       dotenv: 16.0.3
       esbuild: 0.17.8
       tsx: 3.12.3
-      typescript: 4.9.5
+      typescript: 5.2.2
       vitest: 0.28.5
 
   packages/core:
@@ -43,15 +43,15 @@ importers:
       fast-glob: ^3.2.12
       tsup: ^6.6.3
       tsx: ^3.12.3
-      typescript: ^4.9.5
+      typescript: ^5.2.2
       vitest: ^0.28.5
     devDependencies:
       '@biomejs/biome': 1.1.2
       dotenv: 16.0.3
       fast-glob: 3.2.12
-      tsup: 6.6.3_typescript@4.9.5
+      tsup: 6.6.3_typescript@5.2.2
       tsx: 3.12.3
-      typescript: 4.9.5
+      typescript: 5.2.2
       vitest: 0.28.5
 
   packages/unplugin:
@@ -63,7 +63,7 @@ importers:
       fast-glob: ^3.2.12
       tsup: ^6.6.3
       tsx: ^3.12.3
-      typescript: ^4.9.5
+      typescript: ^5.2.2
       unplugin: ^1.1.0
       vite: ^4.1.1
       vitest: ^0.28.5
@@ -75,9 +75,9 @@ importers:
       '@types/node': 18.13.0
       dotenv: 16.0.3
       fast-glob: 3.2.12
-      tsup: 6.6.3_typescript@4.9.5
+      tsup: 6.6.3_typescript@5.2.2
       tsx: 3.12.3
-      typescript: 4.9.5
+      typescript: 5.2.2
       vite: 4.1.1_@types+node@18.13.0
       vitest: 0.28.5
 
@@ -90,7 +90,7 @@ importers:
       dotenv: ^16.0.3
       preact: ^10.11.3
       shiki: ^0.14.1
-      typescript: ^4.9.3
+      typescript: ^5.2.2
       unplugin-typedotenv: workspace:*
       vite: ^4.1.0
     dependencies:
@@ -102,7 +102,7 @@ importers:
     devDependencies:
       '@babel/core': 7.20.12
       '@preact/preset-vite': 2.5.0_3ae3y4hh44lcmdpni6pev6zm6u
-      typescript: 4.9.5
+      typescript: 5.2.2
       unplugin-typedotenv: link:../packages/unplugin
       vite: 4.1.1
 
@@ -3332,7 +3332,7 @@ packages:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
     dev: true
 
-  /tsup/6.6.3_typescript@4.9.5:
+  /tsup/6.6.3_typescript@5.2.2:
     resolution: {integrity: sha512-OLx/jFllYlVeZQ7sCHBuRVEQBBa1tFbouoc/gbYakyipjVQdWy/iQOvmExUA/ewap9iQ7tbJf9pW0PgcEFfJcQ==}
     engines: {node: '>=14.18'}
     hasBin: true
@@ -3362,7 +3362,7 @@ packages:
       source-map: 0.8.0-beta.0
       sucrase: 3.29.0
       tree-kill: 1.2.2
-      typescript: 4.9.5
+      typescript: 5.2.2
     transitivePeerDependencies:
       - supports-color
       - ts-node
@@ -3421,9 +3421,9 @@ packages:
       is-typed-array: 1.1.10
     dev: true
 
-  /typescript/4.9.5:
-    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
-    engines: {node: '>=4.2.0'}
+  /typescript/5.2.2:
+    resolution: {integrity: sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==}
+    engines: {node: '>=14.17'}
     hasBin: true
     dev: true
 
