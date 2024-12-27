@@ -1,6 +1,6 @@
 {
 	"name": "unplugin-typedotenv",
-	"version": "0.2.2",
+	"version": "0.3.0",
 	"description": "typedotenv plugin for webpack/vite (dotenv utility for TypeScript)",
 	"type": "module",
 	"main": "./dist/index.cjs",
@@ -36,10 +36,14 @@
 	},
 	"typesVersions": {
 		"*": {
-			"*": ["./dist/*"]
+			"*": [
+				"./dist/*"
+			]
 		}
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"fmt": "pnpm -w fmt",
 		"check": "pnpm -w check && tsc --noEmit",

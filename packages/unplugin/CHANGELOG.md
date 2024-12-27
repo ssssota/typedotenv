@@ -1,5 +1,11 @@
 # unplugin-typedotenv
 
+## 0.3.0
+
+### Minor Changes
+
+- [#25](https://github.com/ssssota/typedotenv/pull/25) [`9cad5fcde44d742d1de31a1e40f4c36bf4442f2d`](https://github.com/ssssota/typedotenv/commit/9cad5fcde44d742d1de31a1e40f4c36bf4442f2d) Thanks [@ssssota](https://github.com/ssssota)! - Use unplugin v2 (Drop webpack4 and support Vite 6)
+
 ## 0.2.2
 
 ### Patch Changes
