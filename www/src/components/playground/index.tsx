@@ -107,7 +107,7 @@ export function Playground() {
 				</ul>
 			</section>
 			<output class={classes.output}>
-				<Highlight code={result.value} options={{ lang: "ts" }} />
+				<Highlight code={result.value} />
 			</output>
 		</form>
 	);

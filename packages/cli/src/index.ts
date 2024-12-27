@@ -80,7 +80,7 @@ const generateCodeFromOptions = async ({
 			: ({
 					denyList: deny.length > 0 ? deny : undefined,
 					required: required.length > 0 ? required : undefined,
-			  } as const);
+				} as const);
 	return generate(dotenv, {
 		...propOptions,
 		envObject,

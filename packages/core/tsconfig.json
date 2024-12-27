@@ -1,8 +1,8 @@
 {
-  "extends": "../../tsconfig.json",
-  "compilerOptions": {
-    "declaration": true,
-    "moduleResolution": "node",
-    "lib": ["es2020"]
-  }
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"declaration": true,
+		"moduleResolution": "node",
+		"lib": ["es2020"]
+	}
 }

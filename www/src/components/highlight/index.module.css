@@ -1,8 +1,9 @@
 .container > * {
-  height: 100%;
-  font-size: 1.2em;
-  padding: 5px;
-  border: var(--input-border-width) var(--input-border-color) var(--input-border-style);
-  border-radius: var(--input-border-radius);
+	height: 100%;
+	font-size: 1.2em;
+	padding: 5px;
+	border: var(--input-border-width) var(--input-border-color)
+		var(--input-border-style);
+	border-radius: var(--input-border-radius);
 	white-space: pre-wrap;
 }

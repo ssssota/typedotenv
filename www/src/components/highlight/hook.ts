@@ -1,14 +1,17 @@
-import { useSignal, useSignalEffect } from "@preact/signals";
-import { useEffect } from "preact/hooks";
-import { highlighter } from "../../signals/highlighter";
+import { createHighlighterCoreSync } from "shiki";
+import { createJavaScriptRegexEngine } from "shiki/engine/javascript";
+import ts from "shiki/langs/typescript.mjs";
+import github from "shiki/themes/github-light.mjs";
 
-export function useHighlightedHtml(code: string, options: {}) {
-	const html = useSignal("");
-	useEffect(() => {
-		html.value = highlighter.value?.codeToHtml(code, options) ?? "";
-	}, [code, options]);
-	useSignalEffect(() => {
-		html.value = highlighter.value?.codeToHtml(code, options) ?? "";
+const highlighter = createHighlighterCoreSync({
+	themes: [github],
+	langs: [ts],
+	engine: createJavaScriptRegexEngine(),
+});
+
+export function useHighlightedHtml(code: string) {
+	return highlighter.codeToHtml(code, {
+		lang: "typescript",
+		theme: "github-light",
 	});
-	return html;
 }

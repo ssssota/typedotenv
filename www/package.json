@@ -9,17 +9,17 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@preact/signals": "^1.1.3",
+		"@preact/signals": "^1.3.1",
 		"@typedotenv/core": "workspace:*",
-		"dotenv": "^16.0.3",
-		"preact": "^10.11.3",
-		"shiki": "^0.14.1"
+		"dotenv": "^16.4.7",
+		"preact": "^10.25.3",
+		"shiki": "^1.24.4"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.20.12",
-		"@preact/preset-vite": "^2.5.0",
-		"typescript": "^5.2.2",
+		"@babel/core": "^7.26.0",
+		"@preact/preset-vite": "^2.9.3",
+		"typescript": "^5.7.2",
 		"unplugin-typedotenv": "workspace:*",
-		"vite": "^4.1.0"
+		"vite": "^5.4.11"
 	}
 }
