@@ -1,9 +1,11 @@
 .input {
-  padding: 2px;
-  border: var(--input-border-width) var(--input-border-color) var(--input-border-style);
-  border-radius: var(--input-border-radius);
+	padding: 2px;
+	border: var(--input-border-width) var(--input-border-color)
+		var(--input-border-style);
+	border-radius: var(--input-border-radius);
 }
 .input:focus {
-  outline: var(--input-focus-outline-color) var(--input-focus-outline-style) var(--input-focus-outline-width);
-  outline-offset: var(--input-focus-outline-offset);
+	outline: var(--input-focus-outline-color) var(--input-focus-outline-style)
+		var(--input-focus-outline-width);
+	outline-offset: var(--input-focus-outline-offset);
 }

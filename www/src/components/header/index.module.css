@@ -1,21 +1,21 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .title {
-  display: flex;
-  align-items: end;
-  gap: 0.5em;
-  line-height: 1;
+	display: flex;
+	align-items: end;
+	gap: 0.5em;
+	line-height: 1;
 }
 .title img {
-  width: 64px;
+	width: 64px;
 }
 .navigation {
-  display: flex;
+	display: flex;
 }
 .navigation > a {
-  display: flex;
-  padding: 0.25em;
+	display: flex;
+	padding: 0.25em;
 }

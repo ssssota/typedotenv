@@ -18,31 +18,43 @@ export function useTypedotenv(initial: string) {
 			return `ERROR!!\n\n${e instanceof Error ? e.message : e}`;
 		}
 	});
-	const onChange = useCallback((val: string) => {
-		dotenv.value = val;
-	}, []);
-	const onChangeAllowList = useCallback((list: string[]) => {
-		options.value = {
-			...options.value,
-			denyList: undefined,
-			required: undefined,
-			allowList: list,
-		};
-	}, []);
-	const onChangeDenyList = useCallback((list: string[]) => {
-		options.value = {
-			...options.value,
-			denyList: list,
-			allowList: undefined,
-		};
-	}, []);
-	const onChangeRequired = useCallback((list: string[]) => {
-		options.value = {
-			...options.value,
-			denyList: list,
-			allowList: undefined,
-		};
-	}, []);
+	const onChange = useCallback(
+		(val: string) => {
+			dotenv.value = val;
+		},
+		[dotenv],
+	);
+	const onChangeAllowList = useCallback(
+		(list: string[]) => {
+			options.value = {
+				...options.value,
+				denyList: undefined,
+				required: undefined,
+				allowList: list,
+			};
+		},
+		[options],
+	);
+	const onChangeDenyList = useCallback(
+		(list: string[]) => {
+			options.value = {
+				...options.value,
+				denyList: list,
+				allowList: undefined,
+			};
+		},
+		[options],
+	);
+	const onChangeRequired = useCallback(
+		(list: string[]) => {
+			options.value = {
+				...options.value,
+				denyList: list,
+				allowList: undefined,
+			};
+		},
+		[options],
+	);
 	return {
 		dotenv,
 		options,

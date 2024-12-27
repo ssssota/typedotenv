@@ -1,11 +1,11 @@
-import * as path from "path";
+import * as fs from "node:fs/promises";
+import * as path from "node:path";
 import {
 	type Command,
 	type OptionValues,
 	createCommand,
 } from "@commander-js/extra-typings";
 import { generate } from "@typedotenv/core";
-import * as fs from "fs/promises";
 
 type Options = {
 	input?: string | undefined;
@@ -80,7 +80,7 @@ const generateCodeFromOptions = async ({
 			: ({
 					denyList: deny.length > 0 ? deny : undefined,
 					required: required.length > 0 ? required : undefined,
-			  } as const);
+				} as const);
 	return generate(dotenv, {
 		...propOptions,
 		envObject,

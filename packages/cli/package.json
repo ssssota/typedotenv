@@ -6,9 +6,7 @@
 	"bin": {
 		"typedotenv": "dist/index.cjs"
 	},
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"scripts": {
 		"dev": "tsx src/index.ts",
 		"build": "tsx build.ts",
@@ -22,30 +20,23 @@
 		"type": "git",
 		"url": "git+https://github.com/ssssota/typedotenv.git"
 	},
-	"keywords": [
-		"dotenv",
-		"typescript",
-		"code-generator",
-		"cli",
-		"tool"
-	],
+	"keywords": ["dotenv", "typescript", "code-generator", "cli", "tool"],
 	"author": "TOMIKAWA Sotaro",
 	"license": "Apache-2.0",
 	"bugs": {
 		"url": "https://github.com/ssssota/typedotenv/issues"
 	},
 	"homepage": "https://github.com/ssssota/typedotenv#readme",
-	"packageManager": "pnpm@7.27.0",
 	"devDependencies": {
-		"@biomejs/biome": "^1.1.2",
-		"@commander-js/extra-typings": "^10.0.2",
+		"@biomejs/biome": "^1.9.4",
+		"@commander-js/extra-typings": "^10.0.3",
 		"@typedotenv/core": "workspace:*",
-		"@types/node": "^18.13.0",
-		"commander": "^10.0.0",
-		"dotenv": "^16.0.3",
-		"esbuild": "^0.17.8",
-		"tsx": "^3.12.3",
-		"typescript": "^5.2.2",
+		"@types/node": "^18.19.68",
+		"commander": "^10.0.1",
+		"dotenv": "^16.4.7",
+		"esbuild": "^0.17.19",
+		"tsx": "^4.19.2",
+		"typescript": "^5.7.2",
 		"vitest": "^0.28.5"
 	}
 }

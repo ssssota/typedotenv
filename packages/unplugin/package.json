@@ -36,14 +36,10 @@
 	},
 	"typesVersions": {
 		"*": {
-			"*": [
-				"./dist/*"
-			]
+			"*": ["./dist/*"]
 		}
 	},
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"scripts": {
 		"fmt": "pnpm -w fmt",
 		"check": "pnpm -w check && tsc --noEmit",
@@ -69,23 +65,22 @@
 		"url": "https://github.com/ssssota/typedotenv/issues"
 	},
 	"homepage": "https://github.com/ssssota/typedotenv#readme",
-	"packageManager": "pnpm@7.27.0",
 	"devDependencies": {
-		"@biomejs/biome": "^1.1.2",
-		"@types/node": "^18.13.0",
-		"dotenv": "^16.0.3",
-		"fast-glob": "^3.2.12",
-		"tsup": "^6.6.3",
-		"tsx": "^3.12.3",
-		"typescript": "^5.2.2",
-		"vite": "^4.1.1",
-		"vitest": "^0.28.5"
+		"@biomejs/biome": "^1.9.4",
+		"@types/node": "^18.19.68",
+		"dotenv": "^16.4.7",
+		"fast-glob": "^3.3.2",
+		"tsup": "^6.7.0",
+		"tsx": "^4.19.2",
+		"typescript": "^5.7.2",
+		"vite": "^5.4.11",
+		"vitest": "^2.1.8"
 	},
 	"peerDependencies": {
 		"dotenv": "^16.0.0"
 	},
 	"dependencies": {
 		"@typedotenv/core": "workspace:*",
-		"unplugin": "^1.1.0"
+		"unplugin": "^2.0.0"
 	}
 }
