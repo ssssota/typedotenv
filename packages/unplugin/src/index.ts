@@ -1,7 +1,7 @@
-import * as path from "path";
+import * as fs from "node:fs/promises";
+import * as path from "node:path";
 import type { GenerateOptions } from "@typedotenv/core";
 import { generate } from "@typedotenv/core";
-import * as fs from "fs/promises";
 import type { UnpluginBuildContext } from "unplugin";
 import { createUnplugin } from "unplugin";
 

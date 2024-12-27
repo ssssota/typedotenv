@@ -1,8 +1,8 @@
-import { promises as fs } from "fs";
-import { resolve } from "path";
-import { fileURLToPath } from "url";
+import { promises as fs } from "node:fs";
+import { resolve } from "node:path";
+import { basename } from "node:path/posix";
+import { fileURLToPath } from "node:url";
 import fg from "fast-glob";
-import { basename } from "path/posix";
 
 async function run() {
 	// fix cjs exports
