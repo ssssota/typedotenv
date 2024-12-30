@@ -1,3 +1,4 @@
+import type { GenerateOptions } from "@typedotenv/core";
 import { Editor } from "../editor";
 import { Highlight } from "../highlight";
 import { Input } from "../input";
@@ -33,6 +34,19 @@ export function Playground() {
 						/>
 					</li>
 					<li>
+						Declaration mode{" "}
+						<input
+							type="checkbox"
+							checked={options.value.mode === "declaration"}
+							onChange={(ev) => {
+								options.value = {
+									...options.value,
+									mode: ev.currentTarget.checked ? "declaration" : "runtime",
+								} as GenerateOptions;
+							}}
+						/>
+					</li>
+					<li>
 						Runtime type check{" "}
 						<input
 							type="checkbox"
@@ -41,7 +55,7 @@ export function Playground() {
 								options.value = {
 									...options.value,
 									disableRuntimeTypeCheck: !ev.currentTarget.checked,
-								};
+								} as GenerateOptions;
 							}}
 						/>
 					</li>
@@ -54,7 +68,7 @@ export function Playground() {
 								options.value = {
 									...options.value,
 									enableTypeAssertion: ev.currentTarget.checked,
-								};
+								} as GenerateOptions;
 							}}
 						/>
 					</li>

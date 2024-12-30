@@ -13,7 +13,7 @@ export function useTypedotenv(initial: string) {
 	const dotenv = useSignal(initial);
 	const result = useComputed(() => {
 		try {
-			return generate(dotenv.value, options.value);
+			return generate(dotenv.value, options.value).code;
 		} catch (e) {
 			return `ERROR!!\n\n${e instanceof Error ? e.message : e}`;
 		}

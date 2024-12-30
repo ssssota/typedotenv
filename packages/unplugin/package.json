@@ -81,6 +81,7 @@
 	},
 	"dependencies": {
 		"@typedotenv/core": "workspace:*",
+		"magic-string": "^0.30.17",
 		"unplugin": "^2.0.0"
 	}
 }

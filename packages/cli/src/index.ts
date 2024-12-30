@@ -87,7 +87,7 @@ const generateCodeFromOptions = async ({
 		enableTypeAssertion,
 		disableRuntimeTypeCheck: disableTypeCheck,
 		accessFromIndexSignature,
-	});
+	}).code;
 };
 
 const listVarsFromCode = (code: string) => {

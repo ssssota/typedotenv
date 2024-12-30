@@ -80,6 +80,9 @@ importers:
       '@typedotenv/core':
         specifier: workspace:*
         version: link:../core
+      magic-string:
+        specifier: ^0.30.17
+        version: 0.30.17
       unplugin:
         specifier: ^2.0.0
         version: 2.1.0
