@@ -1,5 +1,5 @@
 import * as fs from "node:fs/promises";
-import { generate } from "@typedotenv/core";
+import { createTransform, generate } from "@typedotenv/core";
 import type {
 	TransformResult,
 	UnpluginBuildContext,
@@ -7,21 +7,19 @@ import type {
 } from "unplugin";
 import { createUnplugin } from "unplugin";
 import { type Options, resolveDotenv, resolveOutput } from "./options";
-import { createTransform } from "./transform";
 
 const name = "unplugin-typedotenv";
 export default createUnplugin((options: Options) => {
 	const envfile = resolveDotenv(options);
 	const output = resolveOutput(options);
-	let transform: (code: string) => TransformResult = () => null;
+	const transform = createTransform(options);
 	const generateCode = async () => {
 		try {
 			const [dotenv, previous] = await Promise.all([
 				fs.readFile(envfile, "utf8"),
 				fs.readFile(output, "utf8").catch(() => {}),
 			]);
-			const { code, variables } = generate(dotenv, options);
-			transform = createTransform(options, variables);
+			const { code } = generate(dotenv, options);
 			if (
 				previous?.replace(/[ \n\r\t]+/g, " ") !==
 				code.replace(/[ \n\r\t]+/g, " ")

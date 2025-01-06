@@ -6,7 +6,8 @@ import { defineConfig } from "vite";
 export default defineConfig(({ mode }) => ({
 	plugins: [
 		typedotenv({
-			output: "src/env.ts",
+			output: "src/env.d.ts",
+			mode: "declaration",
 			env: mode,
 			envObject: "import.meta.env",
 		}),

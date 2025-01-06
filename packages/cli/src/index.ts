@@ -40,6 +40,7 @@ const applyGenerateOptions = <
 			"--env-object <object>",
 			"Object provide env variable [default:process.env]",
 		)
+		.option("--declaration", "Use declaration mode")
 		.option("--enable-type-assertion", "Disable type assertion (`as string`)")
 		.option("--disable-type-check", "Disable runtime type-check")
 		.option("--access-from-index-signature", "Access from index signature")

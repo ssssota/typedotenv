@@ -52,6 +52,10 @@ importers:
         version: 0.28.5
 
   packages/core:
+    dependencies:
+      magic-string:
+        specifier: ^0.30.17
+        version: 0.30.17
     devDependencies:
       '@biomejs/biome':
         specifier: ^1.9.4

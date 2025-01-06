@@ -1,4 +1,4 @@
-import { VITE_DESCRIPTION } from "../../env";
+import { VITE_DESCRIPTION } from "virtual:env";
 import { GitHub } from "./github";
 import classes from "./index.module.css";
 import { Npm } from "./npm";

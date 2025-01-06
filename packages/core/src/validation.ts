@@ -1,9 +1,5 @@
 import type { DotenvParseOutput } from "dotenv";
-
-export type PropertyOptions = { patterns?: Record<string, RegExp | string> } & (
-	| { allowList: string[]; denyList?: undefined; required?: undefined }
-	| { allowList?: undefined; denyList?: string[]; required?: string[] }
-);
+import type { PropertyOptions } from "./options";
 
 export class ValidationError extends Error {}
 

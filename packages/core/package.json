@@ -46,5 +46,8 @@
 	},
 	"peerDependencies": {
 		"dotenv": "^16.0.0"
+	},
+	"dependencies": {
+		"magic-string": "^0.30.17"
 	}
 }
